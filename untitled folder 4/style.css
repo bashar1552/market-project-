@@ -1,0 +1,144 @@
+ملف css/* عام */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #3e2723;
+    color: white;
+    padding: 20px;
+    text-align: center;
+ 
+
+}
+
+header .logo {
+    font-size: 2em;
+    animation: pulse 2s infinite;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc80;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 3em;
+    animation: fadeInDown 2s ease;
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    margin: 20px 0;
+    animation: fadeIn 3s ease;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    margin: 15px;
+    width: 250px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card h3 {
+    margin: 15px 0 5px;
+    color: #3e2723;
+}
+
+.card p {
+    padding: 0 15px;
+    color: #555;
+}
+
+.card span {
+    display: block;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #ff9800;
+}
+
+/* Footer */
+footer {
+    background-color: #3e2723;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
